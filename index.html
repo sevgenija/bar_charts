@@ -6,34 +6,26 @@
 <title>Risks</title>
 <link rel="stylesheet" href="amcharts/style.css" type="text/css">
 
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link href="bar_charts.css" rel="stylesheet">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Resources -->
 <script src="https://www.amcharts.com/lib/4/core.js"></script>
 <script src="https://www.amcharts.com/lib/4/charts.js"></script>
 <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
 <body>
 
-
-<!-- Styles -->
-<style>
-#chartdiv {
-  width: 100%;
-  height: 650px;
-}
-#chartdiv2 {
-  width: 100%;
-  height: 650px;
-}
-
-body {
-  font-family: "Helvetica Neue";
-  font-size: 14px;
-}
 
 
 </style>
 
-</body>
+
 <h4>Potential side-effects from chemotherapy.</h4>
 <p>People like you experience problems from chemotherapy, which have a big impact on their lifestyles.</p>
 <p>Chemotherapy kills fast-growing cancer cells. But when the drugs travel throughout
@@ -85,11 +77,11 @@ formats.</p>
 
 <!-- BarChart code -->
 
-<br><br>
-<h4>Imagine that there are 100 people and some of them experience different side
+<h4>Bar chart</h4>
+<p>Imagine that there are 100 people and some of them experience different side
   effects from chemotherapy. This bar chart allows you to see how many people out of 100
   from your risk group experience different side effects. If you do not want to  see some factors
-or you want to decrease or increase the frequency scale, use the slider.</h4>
+or you want to decrease or increase the frequency scale, use the slider.</p>
 <script>
 
 am4core.ready(function() {
@@ -163,7 +155,7 @@ chart.cursor = new am4charts.XYCursor();
 
 //Title
 let title = chart.titles.create();
-title.text = "Chemotherapy outcomes";
+//title.text = "Chemotherapy outcomes";
 title.fontSize = 25;
 title.marginBottom = 30;
 
@@ -255,8 +247,11 @@ createSeries("no", "Do not experience");
 <!-- HTML -->
 <div id="chartdiv"></div>
 <br>
-<h4>In this chart you can see how many people do experience and do not experience the side effects.
+<h4>Explore more</h4>
+<p>In this chart you can see how many people do experience and do not experience the side effects.
   In the legend, by marking the checkboxes, you can manage the visibility of
-  presented information</h4>
+  presented information</p>
 <br>
 <div id="chartdiv2"></div>
+
+</body>
